@@ -11,7 +11,7 @@ function listAreas() {
 }
 
 function writeContactsToDom(contact){
-    document.querySelector("#contact-card").innerHTML += contact;
+    document.querySelector("#areas").innerHTML += contact;
 }
 
 module.exports = listContacts;
