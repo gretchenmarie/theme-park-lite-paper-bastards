@@ -42,7 +42,7 @@ dbCalls.fetchAttractions = () => {
     .then(res => res.json())
     .then((result) => {
       // console.log(typeof result);
-      console.log(result);
+      // console.log(result);
       attractions = result;
       return attractions;
     },

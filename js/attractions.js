@@ -1,15 +1,22 @@
 "use strict";
 
-let attractionsData = require('./attractionsData.js');
+let attractionsDB = require('./db-calls.js');
 
-let showAttractions = () => {
-   const attractionsObj = attractionsData;
+let attractions = {};
 
-      let welcomeComponent = `<h2 class="brand">${welcomeObj.name}!</h2>
-   ${storeDesc}
-   .</h3>`;
+attractionsDB.fetchAttractions()
+   .then((result) => {
+    attractions = result;
+    console.log(result);
+});
 
-   return welcomeComponent;
-};
+module.exports = attractions;
 
-module.exports = {showAttractions};
+/* "use strict";
+
+function createAttraction(name, description){
+    return `<h1>${name}</h1>
+            <p>${description}</p>`;
+}
+
+module.exports = createAttraction; */
