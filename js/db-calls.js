@@ -5,13 +5,14 @@ let dbCalls = {};
 
 // hold on to the data locally within this module - may need it again.
 let parkInfo = {};
+let areaTypes = {};
 let attractions = {};
 let attractionTypes = {};
 let areaTypes = {};
 
 
 dbCalls.fetchParkInfo = () => {
-    return fetch(`https://external-data-56670.firebaseio.com/park-info.json`)
+  return fetch(`https://external-data-56670.firebaseio.com/park-info.json`)
       .then(res => res.json())
       .then((result) => {
         // console.log(typeof result);
@@ -29,7 +30,10 @@ dbCalls.fetchAreas = () => {
     .then(res => res.json())
     .then((result) => {
       // console.log(typeof result);
+<<<<<<< HEAD
       console.log(result);
+=======
+>>>>>>> master
       areaTypes = result;
       return areaTypes;
     },
@@ -43,6 +47,7 @@ dbCalls.fetchAttractions = () => {
     .then(res => res.json())
     .then((result) => {
       // console.log(typeof result);
+      console.log(result);
       attractions = result;
       return attractions;
     },
@@ -56,6 +61,7 @@ dbCalls.fetchTypes = () => {
     .then(res => res.json())
     .then((result) => {
       // console.log(typeof result);
+      console.log(result);
       attractionTypes = result;
       return attractionTypes;
     },
@@ -67,7 +73,5 @@ dbCalls.fetchTypes = () => {
 dbCalls.getParkInfo = () => {
   return parkInfo;  
 };
-
-
 
 module.exports = dbCalls;
