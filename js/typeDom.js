@@ -1,8 +1,11 @@
 "use strict";
 
+
 function createType(id,name) {
-   return `<h1>${id}</h1>
-           <p>${name}</p>`;
+   return `<div class="typeCSS">
+                <h1>${id}</h1>
+                <p>${name}</p>
+           </div>`;
 }
 
 module.exports = createType;

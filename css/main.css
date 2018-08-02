@@ -24,4 +24,17 @@
 .footer {
     padding-top: 8em;
     background: linear-gradient(white, #a2d4eb);
+>>>>>>> origin
 }
+
+#type {
+    display:flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.typeCSS {
+    flex-grow: 1;
+    width: 4rem;
+    text-align: center;
+    text-transform: capitalize;
