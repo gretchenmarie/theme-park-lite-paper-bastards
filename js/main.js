@@ -10,7 +10,7 @@ let attractionsType = require('./attractionsType.js');
 
 
 // Attractions Block
-let attractions = require('./attractions.js')
+let attractions = require('./attractions.js');
 
 
 
