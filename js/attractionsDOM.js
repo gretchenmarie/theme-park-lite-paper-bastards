@@ -4,12 +4,19 @@ let db = require('./db-calls');
 
 function createAttraction(name, description, type_id, area_id) {
     let myAttractionType = "";
+    let myAttractionArea = "";
 
     let attractionTypes = db.getAttractionTypes();
-    console.log("attractionTypes", attractionTypes);
     attractionTypes.forEach((item) => {
         if(item.id === type_id) {
             myAttractionType = item.name;
+        }
+    });
+
+    let attractionAreas = db.getAttractionAreas();
+    attractionAreas.forEach((item) => {
+        if(item.id === area_id) {
+            myAttractionArea = item.name;
         }
     });
 
@@ -19,8 +26,8 @@ function createAttraction(name, description, type_id, area_id) {
                     <p class="card-text">${description}</p>
                 </div>
                 <div class="card-footer">
-                    <span>Area ${area_id}</span><br>
-                    <span>Attraction type ${myAttractionType}</span>
+                    <span style="text-transform: capitalize">${myAttractionArea}</span><br>
+                    <span style="text-transform: capitalize">${myAttractionType}</span>
                 </div>
             </div>`;
 }
