@@ -3,3 +3,16 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+#type {
+    display:flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.typeCSS {
+    flex-grow: 1;
+    width: 4rem;
+    text-align: center;
+    text-transform: capitalize;
+}
