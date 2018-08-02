@@ -57,7 +57,7 @@ dbCalls.fetchTypes = () => {
     .then(res => res.json())
     .then((result) => {
       // console.log(typeof result);
-      console.log(result);
+      console.log("attraction type", result);
       attractionTypes = result;
       return attractionTypes;
     },
@@ -68,6 +68,14 @@ dbCalls.fetchTypes = () => {
 
 dbCalls.getParkInfo = () => {
   return parkInfo;  
+};
+
+dbCalls.getAttractionAreas = () => {
+  return areaTypes;  
+};
+
+dbCalls.getAttractionTypes = () => {
+  return attractionTypes;  
 };
 
 module.exports = dbCalls;
