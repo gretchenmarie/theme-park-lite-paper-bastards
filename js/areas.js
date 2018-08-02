@@ -1,23 +1,16 @@
 "use strict";
 
-function createAreaDesc(name, description, id){
-    return `<h1>${name}</h1>
-            <p>${description}</p>
-            <p>${id}</p>`;
-}
+let db = require('./db-calls.js');
+let areasList = require('./areasList.js');
 
-module.exports = createAreaDesc;
+let areaData = {};
 
+db.fetchAreas()
+.then((result) => {
+    areaData = result;
+    areasList(areaData);
+});
 
+module.exports = areaData;
 
-
-// let db = require('./db-calls.js');
-
-// let areaData = {};
-
-// db.fetchAreas()
-//    .then((result) => {
-//    areaData = result;
-// });
-
-// module.exports = areaData;
+    

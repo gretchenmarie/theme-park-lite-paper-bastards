@@ -1,17 +1,18 @@
 "use strict";
+let areaDOM = require('./areasDOM.js');
+// let getInfo = require('./db-calls.js');
 
-let createAreaDesc = require("./areas");
 
+function listAreas(result) {
 
-function listAreas() {
-
-    getContacts().forEach(contact => {
-        writeContactsToDom(createContact(contact.name, contact.phone, contact.address))
+    result.forEach(result => {
+        writeContactsToDom(areaDOM(result.name, result.description, result.id));
+        console.log(result.name);
     });
 }
 
-function writeContactsToDom(contact){
-    document.querySelector("#areas").innerHTML += contact;
+function writeContactsToDom(result){
+    document.querySelector("#areas").innerHTML += result;
 }
 
-module.exports = listContacts;
+module.exports = listAreas;

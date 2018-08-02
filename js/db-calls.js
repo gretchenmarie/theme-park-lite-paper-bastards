@@ -8,7 +8,6 @@ let parkInfo = {};
 let areaTypes = {};
 let attractions = {};
 let attractionTypes = {};
-let areaTypes = {};
 
 
 dbCalls.fetchParkInfo = () => {
@@ -30,10 +29,7 @@ dbCalls.fetchAreas = () => {
     .then(res => res.json())
     .then((result) => {
       // console.log(typeof result);
-<<<<<<< HEAD
       console.log(result);
-=======
->>>>>>> master
       areaTypes = result;
       return areaTypes;
     },
