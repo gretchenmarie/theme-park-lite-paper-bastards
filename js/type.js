@@ -5,10 +5,12 @@ let attractionsType = require('./attractionsType.js');
 
 let typeData = {};
 
-db.fetchAreas()
+db.fetchTypes()
 .then((result) => {
    typeData = result;
    attractionsType(typeData);
 });
 
 module.exports = typeData;
+
+
