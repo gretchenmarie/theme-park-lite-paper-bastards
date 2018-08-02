@@ -1,13 +1,18 @@
 "use strict";
-
-let db = require('./db-calls.js');
-
-let attractionType = {};
-
-db.fetchTypes()
-   .then((result) => {
-    attractionType = result;
-});
+let typeDom = require('./typeDom.js');
+// let getInfo = require('./db-calls.js');
 
 
-module.exports = attractionType;
+function listType(result) {
+
+   result.forEach(result => {
+       writeContactsToDom(typeDom(result.id,result.name));
+       console.log(result.name);
+   });
+}
+
+function writeContactsToDom(result){
+   document.querySelector("#type").innerHTML += result;
+}
+
+module.exports = listType;
