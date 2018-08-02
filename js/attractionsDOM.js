@@ -1,6 +1,18 @@
 "use strict";
 
+let db = require('./db-calls');
+
 function createAttraction(name, description, type_id, area_id) {
+    let myAttractionType = "";
+
+    let attractionTypes = db.getAttractionTypes();
+    console.log("attractionTypes", attractionTypes);
+    attractionTypes.forEach((item) => {
+        if(item.id === type_id) {
+            myAttractionType = item.name;
+        }
+    });
+
     return `<div class="card text-center" style="width: 19rem; margin: 6px;">
                 <div class="card-header" style="height: 8.5rem;"><h4>${name}</h4></div>
                 <div class="card-body">
@@ -8,9 +20,10 @@ function createAttraction(name, description, type_id, area_id) {
                 </div>
                 <div class="card-footer">
                     <span>Area ${area_id}</span><br>
-                    <span>Attraction type ${type_id}</span>
+                    <span>Attraction type ${myAttractionType}</span>
                 </div>
             </div>`;
 }
 
 module.exports = createAttraction;
+
