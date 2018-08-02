@@ -1,4 +1,4 @@
-"use strict";   
+"use strict";
 
 let db = require('./db-calls.js');
 
@@ -8,5 +8,6 @@ db.fetchParkInfo()
    .then((result) => {
    parkInfo = result;
 });
+
 
 module.exports = parkInfo;
