@@ -3,8 +3,8 @@
 
 function createType(id,name) {
    return `<div class="typeCSS">
-                <h1>${id}</h1>
-                <p>${name}</p>
+                <h1 class="id">${id}</h1>
+                <p class="name">${name}</p>
            </div>`;
 }
 

@@ -14,11 +14,15 @@
     font-size: 3em;
     background: linear-gradient(#a2d4eb, white);
     padding-bottom: 1em;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 50px;
 }
 
 .info {
     text-align: center;
     padding-bottom: 3em;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 25px;
 }
 
 .footer {
@@ -37,4 +41,32 @@
     width: 4rem;
     text-align: center;
     text-transform: capitalize;
+    font-family: 'Mouse Memoirs', sans-serif;
+}
+.id {
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 25px;
+}
+.name {
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 35px;
+}
+.card-header {
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 55px;
+    text-align: center;
+}
+
+.card-title {
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 35px;
+    text-align: center;
+}
+.card-text {
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 25px;
+}
+.card-footer {
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 25px;
 }
