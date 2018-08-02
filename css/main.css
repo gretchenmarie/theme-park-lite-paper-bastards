@@ -4,6 +4,29 @@
     justify-content: center;
 }
 
+#areas {
+    display:flex; 
+    flex-wrap: wrap;
+}
+
+.welcome {
+    text-align: center;
+    font-size: 3em;
+    background: linear-gradient(#a2d4eb, white);
+    padding-bottom: 1em;
+}
+
+.info {
+    text-align: center;
+    padding-bottom: 3em;
+}
+
+.footer {
+    padding-top: 8em;
+    background: linear-gradient(white, #a2d4eb);
+>>>>>>> origin
+}
+
 #type {
     display:flex; 
     flex-wrap: wrap;
@@ -15,4 +38,3 @@
     width: 4rem;
     text-align: center;
     text-transform: capitalize;
-}

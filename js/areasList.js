@@ -6,8 +6,8 @@ let areaDOM = require('./areasDOM.js');
 function listAreas(result) {
 
     result.forEach(result => {
-        writeContactsToDom(areaDOM(result.name, result.description, result.id));
-        console.log(result.name);
+        writeContactsToDom(areaDOM(result.name, result.description, result.colorTheme, result.id));
+        console.log(result);
     });
 }
 

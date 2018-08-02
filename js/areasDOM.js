@@ -1,9 +1,27 @@
 "use strict";
 
-function createAreaDesc(name, description, id) {
-    return `<h1>${name}</h1>
-            <p>${description}</p>
-            <p>${id}</p>`;
+function createAreaCard(name, description, colorTheme, id) {
+    return `<section>
+    <div class="container py-3" style="background-color:#${colorTheme};">
+      <div class="card">
+        <div class="row ">
+          <div class="col-md-4">
+              <img src="../images/${id}.jpg" class="w-100">
+            </div>
+            <div class="col-md-8 px-3">
+              <div class="card-block px-3">
+                <h4 class="card-title">${name}</h4>
+                <p class="card-text">${description}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>`;
 }
 
-module.exports = createAreaDesc;
+
+
+
+module.exports = createAreaCard;
