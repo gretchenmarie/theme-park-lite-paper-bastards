@@ -3,3 +3,18 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+#areas {
+    display:flex; 
+    flex-wrap: wrap;
+}
+
+.welcome {
+    text-align: center;
+    font-size: 3em;
+    background: linear-gradient(#a2d4eb, white);
+}
+
+.info {
+    text-align: center;
+}
