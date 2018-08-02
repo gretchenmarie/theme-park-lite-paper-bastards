@@ -6,3 +6,10 @@ let areaData = require('./areas');
 let areasList = require('./areasList');
 
 
+// Attractions
+let typeData = require('./type');
+let listType = require('./attractionsType');
+
+// Attractions
+let attractionsData = require('./attractions');
+let listAttractions = require('./attractionsList');
